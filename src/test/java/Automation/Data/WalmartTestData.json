@@ -1,0 +1,10 @@
+[
+  {
+    "searchKeyword": "iphone",
+    "expectedResultKeyword": "iphone"
+  },
+  {
+    "searchKeyword": "samsung",
+    "expectedResultKeyword": "samsung"
+  }
+]
