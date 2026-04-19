@@ -23,49 +23,52 @@ web application using Selenium, Cucumber (BDD), TestNG, and Maven.
 ---
 
 ## Framework Architecture
+```
 Automation_Framework/
-│
-├── pom.xml                          → Maven config & dependencies
-├── testSuites/
-│   └── testng.xml                   → Suite runner with listeners
-│
+│── pom.xml → Maven config & dependencies
+│── testSuites/
+│   └── testng.xml → Suite runner with listeners
+
 ├── src/main/java/
 │   └── Automation/
 │       ├── AbstractComponent/
-│       │   └── AbstractComponent.java   → Base class for all pages
+│       │   └── AbstractComponent.java → Base class for all pages
 │       ├── Pageobjects/
-│       │   ├── HomePage.java            → Walmart homepage interactions
-│       │   ├── SearchResultsPage.java   → Search results interactions
-│       │   ├── ProductPage.java         → Product page interactions
-│       │   └── CartPage.java            → Cart page interactions
+│       │   ├── HomePage.java → Walmart homepage interactions
+│       │   ├── SearchResultsPage.java → Search results interactions
+│       │   ├── ProductPage.java → Product page interactions
+│       │   └── CartPage.java → Cart interactions
 │       └── resources/
-│           └── GlobalData.properties    → Configuration file
-│
+│           └── GlobalData.properties → Configuration file
+
 ├── src/main/resources/
-│   └── log4j2.xml                   → Logging configuration
-│
+│   └── log4j2.xml → Logging configuration
+
 ├── src/test/java/
 │   └── Automation/
 │       ├── cucumber/
-│       │   ├── WalmartSearch.feature    → Scenario 1 in Gherkin
-│       │   ├── WalmartCart.feature      → Scenario 2 in Gherkin
-│       │   └── TestNGTestRunner.java    → Cucumber + TestNG bridge
-│       ├── data/
-│       │   ├── DataReader.java          → JSON data reader utility
-│       │   └── WalmartTestData.json     → External test data
-│       ├── stepDefinitions/
-│       │   └── WalmartStepDefs.java     → Step definitions
-│       ├── Test/
-│       │   ├── SearchProd.java          → Standalone test (Scenario 1)
-│       │   ├── Additem.java             → Standalone test (Scenario 2)
-│       │   ├── Scenario_1.java          → Data driven test
-│       │   └── Scenario_2.java          → POM based test
-│       └── TestComponents/
-│           ├── BaseTest.java            → Driver setup & utilities
-│           └── Listeners.java           → ExtentReports & screenshots
-│
-├── reports/                         → ExtentReports HTML generated here
-└── logs/                            → Log4j2 execution logs
+│       │   ├── WalmartSearch.feature → Scenario 1 in Gherkin
+│       │   ├── WalmartCart.feature → Scenario 2 in Gherkin
+│       │   ├── TestNGTestRunner.java → Cucumber + TestNG bridge
+│       │   ├── data/
+│       │   │   ├── DataReader.java → JSON reader utility
+│       │   │   └── WalmartTestData.json → External test data
+│       │   ├── stepDefinitions/
+│       │   │   └── WalmartStepDefs.java → Step definitions
+│       │   └── Test/
+│       │       ├── SearchProd.java → Standalone test (Scenario 1)
+│       │       ├── AddItem.java → Standalone test (Scenario 2)
+│       │       ├── Scenario_1.java → Data-driven test
+│       │       └── Scenario_2.java → POM-based test
+
+├── TestComponents/
+│   ├── BaseTest.java → Driver setup & utilities
+│   └── Listeners.java → ExtentReports & screenshots
+
+├── reports/ → ExtentReports HTML generated here
+└── logs/ → Log4j2 execution logs
+```
+
 ---
 
 ## Design Patterns Used
